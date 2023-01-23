@@ -16,31 +16,11 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>Coca cola</td>
-                            <td>Bebida</td>
-                            <td>2500</td>
-                            <td>Medellín</td>
-                            <td>
-                                <i class="fa-solid fa-pen-to-square text-primary"></i>
-                                <i class="fa-solid fa-trash text-danger"></i>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Pan Bimbo</td>
-                            <td>Alimento</td>
-                            <td>1800</td>
-                            <td>Cartagena</td>
-                            <td>
-                                <i class="fa-solid fa-pen-to-square text-primary"></i>
-                                <i class="fa-solid fa-trash text-danger"></i>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Pintura Roja</td>
-                            <td>Spray</td>
-                            <td>5000</td>
-                            <td>Barranquilla</td>
+                          <tr *ngFor="let producto of listProductos">
+                            <td>{{ producto.nombre }}</td>
+                            <td>{{ producto.categoria }}</td>
+                            <td>{{ producto.ubicacion }}</td>
+                            <td>{{ producto.precio | currency: 'USD' }}</td>
                             <td>
                                 <i class="fa-solid fa-pen-to-square text-primary"></i>
                                 <i class="fa-solid fa-trash text-danger"></i>
